@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook - Taller: ¡Ingenio en Acción 2.0! Juegos Scratch que Cambian el Mundo (3º Primaria) - Sesión 4</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .header { background-color: #2196F3; color: white; text-align: center; padding: 10px; } /* Blue Accent */
+        .activity { margin-bottom: 20px; }
+        .banner {
+            background-color: #2196F3; /* Blue Accent */
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .content { display: none; padding: 10px; border: 1px solid #ddd; margin-bottom: 10px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
+        }
+        strong { /* Using strong instead of red span for keywords based on workshop example style */
+            font-weight: bold;
+        }
+         ul, ol {
+            margin-top: 0;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .time-title { margin-bottom: 20px; text-align: center; font-size: 1.2em; color: #555;} /* Style for static title */
+         em { /* Style for facilitator notes within dialogue */
+            display: block; /* Puts note on a new line */
+            margin-top: 5px;
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            if (content) {
+                content.style.display = content.style.display === "none" ? "block" : "none";
+            }
+        }
+
+        // Initialize content hidden state on load
+        window.onload = () => {
+             // Ensure all content starts hidden
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+        };
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Playbook - Taller: ¡Ingenio en Acción 2.0! Juegos Scratch que Cambian el Mundo (3º Primaria) - Sesión 4</h1>
+    </div>
+    <div class="container">
+        <h2 class="time-title">Tiempo efectivo de clase: 40 minutos</h2> <!-- Static Title -->
+
+        <!-- De un Vistazo y Preparación Previa -->
+        <div id="activity-0" class="activity">
+            <div class="banner" onclick="toggleContent('activity_0_content')">
+                <div class="title">📝 De un Vistazo: Sesión 4</div>
+            </div>
+            <div id="activity_0_content" class="content">
+                <table>
+                    <tr>
+                        <td style="width: 50%; padding: 10px; border-right: 1px solid #ddd;">
+                            <strong>🎯 Objetivos:</strong>
+                            <ul>
+                                <li><strong>Táctica 4:</strong> Refinar las ideas de juego utilizando "Yes, and..." para expandir y "Concerns, Confusions, Conflicts" para pulir.</li>
+                                <li><strong>Táctica 5:</strong> Crear el Prototipo Conceptual final del videojuego en formato T-Bar.</li>
+                                <li>Presentar los prototipos T-Bar ("Lanzamiento Conceptual").</li>
+                                <li>Dar y recibir retroalimentación constructiva usando Like, Wish, Wonder.</li>
+                                <li>Cerrar el taller motivando para la fase de desarrollo real en Scratch.</li>
+                            </ul>
+                            <strong>💡 Tácticas Principales:</strong> Yes, and... & Concerns, Confusions, Conflicts (Combinadas y Adaptadas), T-Bar (Plan Maestro), Show & Tell + Like, Wish, Wonder (Presentación y Retro).
+                            <br><br>
+                            <strong>🔑 Entregable Clave:</strong> Prototipo Conceptual T-Bar por equipo. Notas de retroalimentación LWW recibidas.
+                        </td>
+                        <td style="width: 50%; padding: 10px;">
+                            <strong>🛠️ Materiales Específicos:</strong>
+                            <ul>
+                                <li>Proyector o pantalla interactiva.</li>
+                                <li>Presentación de diapositivas (Láminas 18-23 detalladas abajo). (Re-numerando desde la sesión anterior)</li>
+                                <li>Acceso a tablero Miro (o similar) con los Storyboards de la Sesión 3 visibles y plantillas T-Bar preparadas, O rotafolios/papeles grandes.</li>
+                                <li>Marcadores, lápices, colores.</li>
+                                <li>Notas adhesivas pequeñas (físicas o digitales) para LWW.</li>
+                                <li>Ejemplos para Refinamiento y T-Bar (Coral Bleaching).</li>
+                            </ul>
+                             <strong>🔧 Preparación Previa para ESTA Sesión:</strong>
+                            <ol>
+                                <li><strong>Presentación Lista:</strong> Tener listas las Láminas 18 a 23. Preparar los ejemplos de Refinamiento y T-Bar.</li>
+                                <li><strong>Plantillas T-Bar:</strong> Listas para cada equipo.</li>
+                                <li><strong>Material Retro LWW:</strong> Notas adhesivas y Lámina 22 con instrucciones LWW.</li>
+                                <li><strong>Espacio de Trabajo:</strong> Equipos deben tener acceso a sus Storyboards y espacio para crear el T-Bar.</li>
+                                <li><strong>Ejemplos:</strong> Tener listos los ejemplos de diálogo "Yes, and..." y las preguntas guía de "Concerns..." basados en Coral Bleaching, y el T-Bar de Coral Bleaching.</li>
+                            </ol>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Desarrollo de la Sesión -->
+
+        <!-- Actividad 1: Repaso y Conexión -->
+        <div id="activity-1" class="activity" data-time="3">
+            <div class="banner" onclick="toggleContent('activity_1_content')">
+                <div class="title">🔗 Actividad 1: Repaso y Conexión ⏰ Tiempo: 3 minutos</div>
+            </div>
+            <div id="activity_1_content" class="content">
+                <table>
+                    <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar la <strong>Diapositiva 18:</strong> Título: "¡Sesión 4: Refinamiento Épico y Lanzamiento Conceptual!" (Iconos ✨🚀🎯). Imagen: Un diamante siendo pulido, o un boceto de juego convirtiéndose en una pantalla final "cool". Texto: "¡Nivel 4 y Final! Pulimos nuestras ideas y creamos el Plan Maestro."
+                        </td>
+                        <td>
+                            "¡Diseñadores de videojuegos imparables, llegamos a la sesión final de 'Ingenio en Acción 2.0'! En la sesión anterior, crearon Storyboards geniales, ¡la película de sus juegos! ¿Listos para el último empujón?"
+                            <br><br>
+                            "Hoy vamos a hacer dos cosas <strong>ÉPICAS</strong>: Primero, vamos a <strong>pulir</strong> sus ideas para que sean aún más brillantes. Y segundo, ¡crearemos el <strong>Plan Maestro T-Bar</strong> y lo 'lanzaremos' al mundo!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 2: Táctica 4: Refinamiento Épico -->
+        <div id="activity-2" class="activity" data-time="15">
+            <div class="banner" onclick="toggleContent('activity_2_content')">
+                <div class="title">✨ Actividad 2: Táctica 4: Refinamiento Épico: Yes, and... & Concerns, Confusions, Conflicts ⏰ Tiempo: 15 minutos</div>
+            </div>
+            <div id="activity_2_content" class="content">
+                <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar la <strong>Diapositiva 19:</strong> Título: "Nivel 4: ¡Refinamiento Épico!" (Iconos ✨ + 🤔 + 🛠️). Instrucciones (Resumen): "1. 'Yes, and...' (5 min): ¡Sumen ideas geniales a su juego! 2. 'Concerns...' (10 min): ¡Detecten problemillas y mejoren!".
+                        </td>
+                        <td>
+                             "¡Ok, equipo! Antes del Plan Final, ¡un último pulido! Usaremos dos poderes combinados:"
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 2:</strong> Explicar y guiar la dinámica "Yes, and..." (5 min).
+                        </td>
+                        <td>
+                            "Primero, ¡<strong>'Yes, and...'</strong> (Sí, y Además...)! Tomen su idea principal del Storyboard. Por turnos, cada uno añadirá una idea <strong>NUEVA</strong> y genial diciendo '¡Sí, y además podríamos [idea nueva]...!'. "
+                            <br><br>
+                            <em>(Mostrar ejemplo de Coral Bleaching):</em> "Para nuestro ejemplo de Coral Bleaching lo podríamos integrar así: ¡Sí, y además... podríamos incluir 'misiones' en cada nivel, como 'Rescata 10 peces atrapados en la basura' o 'Planta 5 corales bebés para repoblar el arrecife', para que el juego sea más interactivo y con objetivos claros! ¡Hagan crecer su juego! (5 min)."
+                            <br><br>
+                             <em>(Guiar la dinámica durante 5 minutos, asegurando que todos participen y construyan sobre las ideas).</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                             <strong>Paso 3:</strong> Explicar y guiar la dinámica "Concerns, Confusions, Conflicts" (10 min). Usar preguntas guía.
+                        </td>
+                         <td>
+                            "Ahora, ¡la lupa de detectives con <strong>'Concerns, Confusions, Conflicts'</strong>! Piensen como jugadores exigentes:"
+                             <br>
+                            "  • ¿Qué <strong>preocupa</strong> del juego (muy difícil/fácil)? ¿Les preocupa que el juego se vuelva <strong>repetitivo o aburrido</strong> después de un rato? ¿Cómo podemos mantener el interés y la motivación del jugador a lo largo del juego?"
+                             <br>
+                            "  • ¿Qué <strong>confunde</strong> (no se entiende)? ¿Creen que las instrucciones del juego son claras y fáciles de entender para otros niños? ¿Sabrán cómo jugar sin confundirse?"
+                             <br>
+                            "  • ¿Hay <strong>conflictos</strong> (ideas chocan, mensaje no claro)? ¿Hay algún 'conflicto' entre las diferentes ideas que hemos añadido con 'Yes, and... '? ¿Se contradicen algunas mejoras? ¿Cómo podemos resolver esos conflictos para crear un juego más coherente y efectivo?"
+                             <br><br>
+                             "¡Hablen y busquen soluciones para mejorar! (10 min)."
+                              <br><br>
+                             <em>(Guiar la discusión durante 10 minutos usando las preguntas. Ayudar a identificar problemas solucionables y buscar mejoras concretas).</em>
+                         </td>
+                    </tr>
+                     <tr>
+                         <td>
+                            <strong>Paso 4:</strong> Instruir para anotar las mejoras clave.
+                         </td>
+                          <td>
+                            "¡Anoten las mejoras clave en su Miro/papel!"
+                             <br><br>
+                            <em>(Entregable: Ideas de juego refinadas y mejoras anotadas).</em>
+                          </td>
+                     </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 3: Táctica 5: T-Bar -->
+        <div id="activity-3" class="activity" data-time="12">
+            <div class="banner" onclick="toggleContent('activity_3_content')">
+                 <div class="title">🗺️ Actividad 3: Táctica 5: T-Bar - ¡El Plan Maestro del Juego! ⏰ Tiempo: 12 minutos</div>
+            </div>
+            <div id="activity_3_content" class="content">
+                 <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar la <strong>Diapositiva 20:</strong> Título: "Nivel 5: T-Bar - ¡Nuestro Plan Maestro!" (Icono 🗺️ + 🛠️). Instrucción: "¡El mapa final! Izquierda: Dibujo GRANDE del juego (pantalla principal/momento clave). Derecha: 1. Nombre y Qué es. 2. Cómo se Juega (Mecánica). 3. Mensaje ODS. 4. Bloques Scratch Clave.". Imagen: Plantilla T-Bar vacía.
+                        </td>
+                        <td>
+                            "¡Después de refinar, llegó la hora del <strong>Plan Maestro T-Bar</strong>! ¡El mapa definitivo para construir su juego en Scratch!"
+                            <br><br>
+                            "Tomen su plantilla T-Bar:"
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 2:</strong> Explicar las dos secciones del T-Bar (Dibujo y Explicación).
+                        </td>
+                        <td>
+                            "  • <strong>Lado Izquierdo:</strong> ¡El súper dibujo! Dibujen la pantalla principal o el momento más importante de su juego, ¡con su personaje y todo!"
+                            <br>
+                            "  • <strong>Lado Derecho:</strong> La explicación secreta para programadores:"
+                            <br>
+                            "      1. <strong>Nombre del Juego y Qué es:</strong> (Título cool y una frase)."
+                            <br>
+                            "      2. <strong>Cómo Funciona:</strong> (La mecánica principal que definieron y refinaron)."
+                            <br>
+                            "      3. <strong>¿Qué ODS ayuda?:</strong> (La idea importante que quieren enseñar)."
+                            <br>
+                            "      4. <strong>Mejoras del juego:</strong> (Platiquen cómo cambió a través del taller, cómo empezó y ahora qué mejoró)."
+                        </td>
+                    </tr>
+                     <tr>
+                         <td>
+                            <strong>Paso 3:</strong> Dar tiempo para completar el T-Bar (10 min). Circular y asegurar que plasmen la idea refinada.
+                         </td>
+                         <td>
+                            "¡Usen sus ideas refinadas y su storyboard! ¡Tienen unos 10 minutos para crear su T-Bar!"
+                            <br><br>
+                             <em>(Circular y asegurar que plasmen su idea refinada en el formato T-Bar).</em>
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>
+                             <strong>Paso 4:</strong> Proyectar la <strong>Diapositiva 21 (Ejemplo Coral Bleaching - ILUSTRACIÓN DE LA TÁCTICA):</strong> Título: "Ejemplo T-Bar: 'Eco-Arrecife'". Imagen/Contenido: Mostrar el T-Bar completo de "Eco-Arrecife" (basado en Coral Bleaching) con todos los elementos: Dibujo claro a la izquierda; Nombre/Qué es, Cómo se juega, Mensaje ODS 14, Bloques Clave (Ej: `when slider changes`, `change [variable]`, `if [variable] > X then switch backdrop`) a la derecha.
+                         </td>
+                          <td>
+                             "Miren el ejemplo del T-Bar de 'Eco-Arrecife'. Así de claro debe quedar su plan. ¡Ahora completen el suyo!"
+                             <br><br>
+                             <em>(Entregable: Prototipo Conceptual T-Bar por equipo).</em>
+                          </td>
+                     </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 4: Presentación "Lanzamiento Conceptual" + Retro LWW -->
+        <div id="activity-4" class="activity" data-time="7">
+            <div class="banner" onclick="toggleContent('activity_4_content')">
+                <div class="title">🚀 Actividad 4: Presentación "Lanzamiento Conceptual" + Retro LWW ⏰ Tiempo: 7 minutos</div>
+            </div>
+            <div id="activity_4_content" class="content">
+                 <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar la <strong>Diapositiva 22:</strong> Título: "¡Show & Tell Gamer! Lanzamiento Conceptual" (Icono 🚀 + ✨ + 📣). Instrucción: "¡Equipos, presenten su T-Bar! (1-2 min). Expliquen: Nombre, Juego, Mensaje ODS. Compañeros: ¡Preparen Like 👍, Wish 🙏, Wonder 🤔!".
+                        </td>
+                        <td>
+                            "¡Desarrolladores, llegó su momento de brillar! ¡El <strong>Lanzamiento Conceptual</strong> de sus juegos! Cada equipo presentará su Plan Maestro T-Bar."
+                            <br><br>
+                            "Tienen <strong>1-2 minutos</strong> para mostrar su T-Bar y contarnos: 1. Nombre del Juego. 2. De qué trata y cómo se juega. 3. Qué mensaje ODS importante enseña."
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 2:</strong> Instruir a los equipos que escuchan para preparar retroalimentación LWW en notas adhesivas.
+                        </td>
+                         <td>
+                             "Mientras escuchan, los demás equipos prepararán su retroalimentación <strong>Like (Me gusta 👍), Wish (Ojalá 🙏), Wonder (Me pregunto 🤔)</strong> en notas adhesivas. ¡Recuerden cómo hacerlo!"
+                         </td>
+                     </tr>
+                    <tr>
+                        <td>
+                             <strong>Paso 3:</strong> Proyectar la <strong>Diapositiva 23:</strong> Título: "Retro con Superpoderes: Like 👍, Wish 🙏, Wonder 🤔". Instrucción: Paso 1: Escucha con atención. (Mostrar el videojuego Coral Bleach, su historia, funcionamiento e impacto). Paso 2: Escribe I LIKE... (Ejemplo: "Me gustó que los jugadores se conviertan en Guardianes del Arrecife. ¡Es muy inmersivo!"). Paso 3: Escribe I WISH... (Ejemplo: "Ojalá el juego incluyera niveles de dificultad para que sea más retador."). Paso 4: Escribe I WONDER... (Ejemplo: “Me pregunto si podrían agregar otros problemas del océano como la pesca ilegal o el turismo irresponsable.”).
+                        </td>
+                         <td>
+                             "Mientras sus compañeros están presentando, nosotros vamos a escribir la retroalimentación de su proyecto con la táctica Like, Wish, Wonder."
+                              <br><br>
+                             <em>(LEER LA LÁMINA 23 con las instrucciones y ejemplos claros para Like, Wish, Wonder).</em>
+                         </td>
+                    </tr>
+                     <tr>
+                         <td>
+                            <strong>Paso 4:</strong> Gestionar las presentaciones (1-2 min por equipo) y la entrega de feedback LWW.
+                         </td>
+                         <td>
+                            "¡Equipo 1, listos para el lanzamiento!"
+                             <br><br>
+                             <em>(Gestionar presentaciones y entrega de LWW. Controlar el tiempo).</em>
+                             <br><br>
+                             "Al final de cada presentación, ¡entreguen sus notas LWW al equipo! ¡Sean buenos críticos constructivos!"
+                              <br><br>
+                             <em>(Entregable Parcial: Presentaciones T-Bar realizadas. Notas LWW recibidas).</em>
+                         </td>
+                     </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 5: Cierre Épico -->
+        <div id="activity-5" class="activity" data-time="3">
+            <div class="banner" onclick="toggleContent('activity_5_content')">
+                 <div class="title">🏆 Actividad 5: Cierre Épico: ¡Misión Cumplida, Futuro Gamer en Marcha! ⏰ Tiempo: 3 minutos</div>
+            </div>
+            <div id="activity_5_content" class="content">
+                 <table>
+                     <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo del Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Felicitar a todos los equipos por completar la receta y tener prototipos T-Bar.
+                        </td>
+                        <td>
+                            "¡¡¡FELICITACIONES, EQUIPOS DE DESARROLLADORES!!! ¡Han completado la receta 'Ingenio en Acción 2.0' y tienen Prototipos T-Bar ESPECTACULARES para sus Juegos Scratch que Cambian el Mundo!"
+                            <br><br>
+                            "Han delimitado, ideado, visualizado, refinado y planeado como verdaderos profesionales. ¡Y han aprendido a colaborar y mejorar con el feedback!"
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <strong>Paso 2:</strong> Motivar para la siguiente fase: el desarrollo en Scratch.
+                        </td>
+                         <td>
+                            "¿Y ahora? ¡Ahora viene la parte de la <strong>acción</strong>! Con su T-Bar y las ideas LWW, están listos para ir a <strong>Scratch</strong> y ¡programar sus videojuegos <strong>DE VERDAD</strong>!"
+                            <br><br>
+                            "¡Estoy increíblemente orgulloso de su ingenio y de cómo quieren usar los videojuegos para hacer un mundo mejor! ¡Sigan así!"
+                         </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 3:</strong> Cierre final del taller.
+                        </td>
+                        <td>
+                             "¡Taller 'Ingenio en Acción 2.0' completado! ¡Ahora, a crear esos juegos!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div> <!-- Fin del container -->
+</body>
+</html>
